@@ -15,7 +15,7 @@ SRC_URI="http://www.libimobiledevice.org/downloads/${P}.tar.bz2"
 LICENSE="GPL-2+ LGPL-2.1+"
 SLOT="0/4" # based on SONAME of libimobiledevice.so
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
-IUSE="gnutls python static-libs"
+IUSE="gnutls python static-libs libressl"
 
 RDEPEND=">=app-pda/libplist-1.11:=[python?,${PYTHON_USEDEP}]
 	>=app-pda/libusbmuxd-1.0.9:=
@@ -23,8 +23,12 @@ RDEPEND=">=app-pda/libplist-1.11:=[python?,${PYTHON_USEDEP}]
 		dev-libs/libgcrypt:0
 		>=dev-libs/libtasn1-1.1
 		>=net-libs/gnutls-2.2.0
+		!libressl
 		)
-	!gnutls? ( dev-libs/libressl:0 )"
+	libressl? (
+		dev-libs/libressl:0
+		!gnutls
+		)"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	python? (
