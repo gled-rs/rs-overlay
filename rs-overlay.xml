@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<layman>
+  <overlay
+    type = "git"
+    src  = "https://github.com/gled-rs/rs-overlay.git"
+    contact = "gled@remote-shell.net"
+    status = "unofficial"
+    name = "rs-overlay">
+    <description>
+      Gentoo convenience overlay for my needs
+    </description>
+  </overlay>
+</layman>
