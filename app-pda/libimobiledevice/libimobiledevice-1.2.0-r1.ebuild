@@ -23,11 +23,9 @@ RDEPEND=">=app-pda/libplist-1.11:=[python?,${PYTHON_USEDEP}]
 		dev-libs/libgcrypt:0
 		>=dev-libs/libtasn1-1.1
 		>=net-libs/gnutls-2.2.0
-		!libressl
 		)
 	libressl? (
 		dev-libs/libressl:0
-		!gnutls
 		)"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
