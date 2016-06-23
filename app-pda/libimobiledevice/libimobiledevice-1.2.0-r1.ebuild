@@ -34,6 +34,11 @@ DEPEND="${RDEPEND}
 		>=dev-python/cython-0.17[${PYTHON_USEDEP}]
 		)"
 
+PATCHES=(
+    "${FILESDIR}/01-libressl.patch" # libimobiledevice issue #254
+ )
+
+
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 DOCS=( AUTHORS NEWS README )
